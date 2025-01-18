@@ -2,13 +2,34 @@ package br.com.editor_texto_javafx.editortextojavafx;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+
+import java.io.File;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private TextArea textArea;
+    private File arquivoAtual;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void  salvarArquivo(){
+        
+        if(arquivoAtual != null){
+            escreverAquivoComo(arquivoAtual, textArea.getText());
+        }else {
+            salvarArquivoComo();
+        }
+
     }
+
+    private void salvarArquivoComo() {
+    }
+
+    private void escreverAquivoComo(File file, String coteudo) {
+
+        try {
+
+        }
+    }
+
+
 }
