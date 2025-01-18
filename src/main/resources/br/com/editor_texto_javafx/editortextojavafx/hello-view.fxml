@@ -10,7 +10,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Arquivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" text="Novo" />
+                  <MenuItem mnemonicParsing="false" text="Abrir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Editar">
