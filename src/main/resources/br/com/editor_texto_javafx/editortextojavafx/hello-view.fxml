@@ -38,6 +38,6 @@
       </MenuBar>
    </top>
    <center>
-      <TextArea prefHeight="200.0" prefWidth="200.0" style="-fx-control-inner-background: #221b0e; -fx-background-color: #221b0e; fx-text-fill: #FFFFFF;" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" style="-fx-control-inner-background: #221b0e; -fx-background-color: #221b0e; fx-text-fill: #FFFFFF;" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
