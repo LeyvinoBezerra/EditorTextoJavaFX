@@ -1,73 +1,101 @@
 package br.com.editor_texto_javafx.editortextojavafx;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.scene.control.TextField;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-public class HelloController {
+public class Controller {
     @FXML
     private TextArea textArea;
-    private File arquivoAtual;
+    @FXML
+    private MenuItem menuCopiar;
+    @FXML
+    private MenuItem menuSelecionarTudo;
 
-    public void  salvarArquivo(){
+    private File arquivoAtual;
+    @FXML
+    private TextField textField;
+    @FXML
+    private Stage stage;
+
+    @FXML
+    public void salvar(){
         
         if(arquivoAtual != null){
-            escreverAquivoComo(arquivoAtual, textArea.getText());
+            escreverAquivo(arquivoAtual, textArea.getText());
         }else {
-            salvarArquivoComo();
+            salvarComoArquivo();
         }
 
     }
-    private void escreverAquivoComo(File file, String coteudo) {
+    @FXML
+    public void escreverAquivo(File file, String conteudo) {
 
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            writer.write(coteudo);
+            writer.write(conteudo);
 
         }catch(Exception e){
             e.printStackTrace();
         }
     }
-    private void salvarArquivoComo() {
+    @FXML
+    private void salvarComoArquivo() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Salvar arquivo");
 
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Arquivo de texto(*,.txt)", "*.txt"));
 
+        fileChooser.setInitialFileName("nota.txt");
         arquivoAtual = fileChooser.showSaveDialog(textArea.getScene().getWindow());
 
+
         if (arquivoAtual != null) {
-            escreverAquivoComo(arquivoAtual, textArea.getText());
+            escreverAquivo(arquivoAtual, textArea.getText());
         }
     }
-        public void novoArquivo(){
+
+
+       @FXML
+       public void sair(){
+
+       }
+
+        @FXML
+        public void abrir(){
 
         }
-        public void abrirArquivo(){
-
-        }
+        @FXML
         public void copiar(){
 
         }
+        @FXML
         public void colar(){
 
         }
-        public void selecionar(){
+        @FXML
+        public void selecionarTudo(){
 
         }
+        @FXML
         public void modoClaro(){
 
         }
+
+        @FXML
         public void modoEscuro() {
 
         }
-        public void exibirInformacoes(){
+        @FXML
+        public void sobre(){}
 
-    }
+
 
 
 
