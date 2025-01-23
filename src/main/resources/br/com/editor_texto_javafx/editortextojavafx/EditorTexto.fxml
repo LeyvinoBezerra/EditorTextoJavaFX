@@ -9,6 +9,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Arquivo">
             <items>
+                  <MenuItem mnemonicParsing="false" onAction="#novo" text="Novo" />
               <MenuItem mnemonicParsing="false" onAction="#abrir" text="Abrir" />
                   <MenuItem mnemonicParsing="false" onAction="#salvar" text="Salvar" />
                   <MenuItem mnemonicParsing="false" onAction="#salvarComoArquivo" text="Salvar como" />
