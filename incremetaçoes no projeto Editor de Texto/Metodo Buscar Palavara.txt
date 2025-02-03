@@ -1,0 +1,34 @@
+
+
+    // Método para buscar uma palavra e destacar suas ocorrências
+    public void buscarPalavra(String palavra) {
+        String texto = textArea.getText();
+        int index = texto.indexOf(palavra);
+        if (index >= 0) {
+            textArea.selectRange(index, index + palavra.length());
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Palavra não encontrada");
+            alert.setContentText("A palavra \"" + palavra + "\" não foi encontrada.");
+            alert.show
+=======================================================================================================
+=======================================================================================================
+=======================================================================================================
+=======================================================================================================
+@FXML
+private TextField caixaBusca;
+
+@FXML
+public void buscarPalavra() {
+    String palavra = caixaBusca.getText();
+    String texto = textArea.getText();
+    int index = texto.indexOf(palavra);
+    if (index >= 0) {
+        textArea.selectRange(index, index + palavra.length());
+    } else {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Palavra não encontrada");
+        alert.setContentText("A palavra \"" + palavra + "\" não foi encontrada.");
+        alert.showAndWait();
+    }
+}
