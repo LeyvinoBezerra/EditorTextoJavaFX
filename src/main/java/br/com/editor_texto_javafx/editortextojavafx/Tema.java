@@ -11,7 +11,7 @@ public enum Tema {
 
     ESCURO(
 			"-fx-background-color: #282a36;",//cor da borda, precisa ser definida
-                    "-fx-control-inner-background: #282a36;",// sem essa propriedade não é difinido corretamente
+                    "-fx-control-inner-background: #000000;",// sem essa propriedade não é difinido corretamente
                     "-fx-text-fill: #ffffff; ", //cor do texto
                     "-fx-highlight-fill: #666b87;", //cor da seleção
                     "-fx-highlight-text-fill: #ffffff;"
